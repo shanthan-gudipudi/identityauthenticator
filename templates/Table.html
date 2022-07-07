@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+      <table class="ml-auto mr-auto ">
+        <tr class="text-center">
+          <th  colspan="2"><h5><a class="text-warning"></a>Profile Information</h5></th>
+          <th><h5 class="mx-2"><a class="text-warning"></a>Image of Profile</h5></th>
+          <th ><h5 class="mx-2"><a class="text-warning"></a> IMAGE uploaded by you</h5></th>
+
+          
+        </tr>
+        <tr>
+          <td>
+            <table class="table table-borderless m-2"><br><br>
+              <tbody>
+                <tr>
+                  <th scope="row">First Name</th>
+                </tr>
+                <tr>
+                  <th scope="row">Last Name</th>
+                </tr>
+                <tr>
+                  <th scope="row">Email</th>
+                </tr>
+                <tr>
+                  <th scope="row">Phone Number</th>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td>
+            {% if data1 %}
+            <table class="table table-borderless m-2"><br><br>
+              <tbody>
+                <tr>
+                  <td>{{ data1.fname_u }}</td>
+                </tr>
+                <tr>
+                  <td>{{ data1.lname_u }}</td>
+                </tr>
+                <tr>
+                  <td>{{ data1.email_u }}</td>
+                </tr>
+                <tr>
+                  <td>{{ data1.mobile_u }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+          <td><br><br>
+            <img class="mx-5" height="220vh" src="{{ data1.image_l.url }}"/>
+          </td>
+          <td><br><br>
+            <img class="mx-5" height="220vh" src="{{ data.image.url }}">
+          </td>
+        </tr>
+      </table>
+  {% endif %}
+{% endblock %}

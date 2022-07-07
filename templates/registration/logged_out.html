@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<br><br>
+<h1>Logged Out</h1>
+<p>You have been successfully logged Out.
+    You can <a href="{% url 'login' %}" class="card-link text-warning">
+        <button style="text-align: center;color:white;background:black;" type="button" onclick="location.href = '{% url 'login' %}'" class="btn"
+                    value="Login">Login here
+            </button></a>
+    <img src="{% static 'images/auth3.jpg' %}" width="50%" class="m-0 img-fluid float-right" alt="Responsive image">
+</p>
+{% endblock %}

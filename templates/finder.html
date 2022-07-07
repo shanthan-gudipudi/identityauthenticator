@@ -1,0 +1,28 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Authenticate</h1>
+    <br>
+    <form method="POST" action="{% url 'comp' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group ">
+            <label for="formFileMd" class="form-label">Upload Image of Profile:</label>
+            <input class="form-control form-control-md" name="image" id="formFileMd" type="file" accept="image/*" />
+            <small >Please upload proper & clear image of persons face for better results.</small>
+        </div>
+        <input type="submit" value="Compare Face">
+        <br>
+        <br>
+        {% if data1 %}
+        <strong>Some same person found : </strong>
+        <ul>
+            <li>Name of the person who uploaded the same guy is {{ data1 }} </li>
+            <li>Email of {{ data1 }} for contact with him/her is {{ data1.email_u }}</li>
+            <li>Mobile of {{ data1 }} for calling him/her is {{ data1.mobile_u }}</li>
+            <li>Image of profile:  <br><img width="300" height="300" src="{{ data1.image_l.url }}"/></li>
+            <li> The photo you uploaded was <br><img width="300" height="300" src="{{ data.image.url }}"> </li>
+        </ul>
+        {% endif %}
+    </form>
+{% endblock %}

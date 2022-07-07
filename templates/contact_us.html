@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+<div style="display: flex; justify-content: space-evenly;">
+
+
+
+    <div class="float-left" style="width:13rem;margin:50px">
+        <img src="{% static 'images/teja.jpg' %}" class="card-img-top" height="180px" style="margin-top:10px">
+        <div class="card-body">
+            <h5 class="card-title">Teja Kiran </h5>
+            <h6>Contact:9948691646</h6>
+            <h6>mail:tejakiran10000@gmail.com</h6>
+        </div>
+    </div>
+
+    <div class="float-left" style="width:13rem;margin:50px">
+        <img src="{% static 'images/shanthan.jpeg' %}" class="card-img-top" height="180px" style="margin-top:10px">
+        <div class="card-body">
+            <h5 class="card-title">Shanthan </a></h5>
+            <h6>Contact:9494868432</h6>
+            <h6>mail:ugs19170_it.shanthan@cbit.ac.in</h6>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

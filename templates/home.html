@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+
+<br>
+
+<body style="">
+<!--<form action="/face_check_redirect/" method="post">
+    {% csrf_token %}
+    <input type="submit" value="finder">
+</form>-->
+<div class="liquid-container">
+    <img src="{% static 'images/illustration.webp' %}" width="75%" class="rounded float-right" alt="...">
+</div>
+<br>
+<h1>Home</h1>
+<br>
+<br>
+<!--<button onclick="location.href = '/find/'">Find Someone</button><br><br> &nbsp;
+<button onclick="location.href = '/upload/'">Upload Someone</button>-->
+<button onclick="location.href = '/find/'" type="submit" style="color:white;background:black; width:19%"
+        class="btn btn-default btn-lg"><span class="fa fa-search fa-xs"></span> Authenticate profile
+</button>
+<br>
+<br>
+<button onclick="location.href = '/upload/'" type="submit" style="color:white;background:black; width:22%"
+        class="btn btn-default btn-lg"><span class="fa fa-upload fa-xs"></span> Register a profile
+</button>
+
+
+</body>
+{% endblock %}
